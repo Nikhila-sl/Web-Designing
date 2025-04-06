@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_page</title>
+</head>
+<body>
+    <form action="">
+        Name:<br> <input type="text" id="name"><br>
+        Password:<br> <input type="password" name="" id="pwd"><br>
+        <input type="checkbox" name="" onclick="show()" id="">Show password<br>
+        <input type="submit" value="Login">
+
+    </form>
+
+    <script>
+        function show(){
+            const pwd=document.getElementById('pwd')
+            if(pwd.type=="password")
+            {
+                pwd.type="text"
+            }
+            else{
+                pwd.type="password"
+            }
+        }
+    </script>
+</body>
+</html>

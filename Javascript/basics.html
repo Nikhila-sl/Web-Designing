@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+        <!-- <p id="demo"> Hello World</p> -->
+
+        <!-- <button onclick="document.getElementById('demo').style.backgroundColor='red'">Click</button>
+         -->
+      <script>
+
+        //Using string methods and types [ ARRAY --> STRING ]
+
+        var str="Welcome to my first JavaScript Program First     "
+
+        document.write(str)
+        document.write("<br>")
+        document.write(str.length)
+        document.write("<br>")
+
+        // first value denotes changable value and second value denotes new value of the change
+        document.write(str.replace("first","First"))
+        document.write("<br>")
+        
+        // this indexOf value denotes the first string letter's index valu
+        document.write(str.indexOf("my"))
+        document.write("<br>")
+       
+        // this lastIndexOf value denotes the last string letter's index value
+        document.write(str.lastIndexOf("my"))
+        document.write("<br>")
+      
+        // this search the index of given string
+        document.write(str.search("to"))
+        document.write("<br>")
+
+        //g --> This represents no of same string
+        // i--> this indicates all strings including case sensitive  
+        document.write(str.match(/first/gi))
+        document.write("<br>")  
+        
+        // concat joins the extra string  
+        document.write(str.concat(" Coding"))
+        document.write("<br>")     
+
+        // this represent the character value
+        document.write(str.charAt(11))  
+        document.write("<br>")
+
+        //this represent the ASCII code  of the character value
+        document.write(str.charCodeAt(11)) 
+        document.write("<br>")
+
+        //this trims (delete) the unwanted white spaces in the sentences or anything
+        var s=str.trim()    
+        document.write(s.length)
+        document.write("<br>")
+        
+        //slice--> it cuts the string from - to
+        document.write(str.slice(14,30))   
+        document.write("<br>")
+
+        //substring --> Substring is similar to slice we can use substring as substr
+        document.write(str.substring(19,30))   
+        document.write("<br>")
+
+        //substr --> this donotes first parameter as starting value and second parameter as length of the string
+        document.write(str.substr(19,30))   
+        document.write("<br>")
+
+
+//-----------------------------------------------------------------------------------------------------------------
+
+
+        // [STRING --> ARRAY]
+
+        //split --> thissplits the string as array as by the given parameter
+        document.write(str.split(" "))   
+        document.write("<br>")
+
+//------------------------------------------------------------------------------------------------------------------
+
+        const car={
+                brand : "RENAULT",
+                model : "Duster",
+                color : "White",
+                price : "200000",
+                owner : "Logesh"
+        }
+
+        document.write(car.owner + " , "+car.brand+" , " +car.color+" , "+car.price+" , "+car.model)
+
+//------------------------------------------------------------------------------------------------------
+
+
+        document.getElementById('demo').innerHTML="Hello Everyone"
+        document.write("Hello All")
+        window.alert("Description")
+        console.log("Console")
+
+//------------------------------------------------------------------------------------------------------
+
+        a="Nikhila"
+        var a="JDP"
+        let b=10
+        const c=["nikhi ", "nikhila ", "Nikhi ","NIKHILA "]
+
+// ----------------------------------------------------------------------------------------
+        const bus={
+            brand:"name",
+            model:"model name",
+            color:"back",
+            price:"1000000",
+            owner:"owner name"
+        }
+
+        document.write(car.brand)
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+        document.write("Hello World<br>")
+
+// ----------------------------------------------------------------------------------------------
+
+        function myfunction(){
+            document.write("hello all<br>")       //function declaration
+        }
+        myfunction()      
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction()                   // function call.....
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+        myfunction() 
+
+// // ----------------------------------------------------------------------------------------------
+
+        document.write(myfunction(4,5),"<br>")
+        function myfunction(p1,p2)
+        {
+            return p1*p2
+        }
+
+// // ----------------------------------------------------------------------------------------------
+        
+        var x=10
+        var y=60
+
+        add()
+
+        function add(){
+            document.write(x+y, "<br>")
+        }
+
+//Array types and list 
+
+        const emp=["Abc " ,"cde " ,"ghi " ,"jkl "]
+        //another from to declare array
+        // const emp=new Array("Abc","cde","ghi","jkl")
+
+        document.write(emp)
+        document.write("<br>")
+        
+         //push --> add the element to tha array -- This adds to the last element in the array
+        emp.push("Saai")       
+        document.write(emp)
+        document.write("<br>")
+
+        //pop --> delete the element to the array -- This delete the last element in the array
+        emp.pop()
+        document.write(emp)
+        document.write("<br>")
+
+        //shift --> this delete the first element in the array
+        emp.shift()
+        document.write(emp)
+        document.write("<br>")
+
+         //unshift --> this add the element in first list in the array
+        emp.unshift("Abc","AAA")
+        document.write(emp)
+        document.write("<br>")
+
+        //index or position is know as the lenght like 0 , 1, 2,
+        //here we can replace the current position we give
+        emp[0]="Abcdefg...xyz"
+        document.write(emp)
+        document.write("<br>")
+
+        //delete --> this delete the given position in the array but the space remain in that position
+        delete emp[3]
+        document.write(emp)
+        document.write("<br>")
+
+        //slice --> this slice (delete) the entie element in the given parameter array
+        document.write(emp.slice(2,3))
+        document.write("<br>")
+
+        //splice --> here we need to give 3 values -- 1--> denotes which position
+        //                                            2--> no of counts to delete
+        //                                            3--> the element tobe add denotes by it's position
+        document.write(emp.splice(2,1,"BBB","hello"))
+        document.write(emp)
+        document.write("<br>")
+
+        //The zero-based location in the array from which to start removing elements.
+        emp.splice(4,1,"kavi")
+        document.write(emp)
+        document.write("<br>")
+
+        //array to string conversion
+        document.write(emp.toString())
+        document.write("<br>")
+
+        //this seperates the single string without comma and here we can add any of the letter / symbols / numbers as our wish
+        document.write(emp.join(" * "))
+        document.write("<br>")
+
+
+</script>
+</body>
+</html>
